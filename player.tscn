@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://b1cuxurlb8vgk"]
+
+[ext_resource type="Texture2D" uid="uid://betqjhxj1bxe5" path="res://player/img/Idle__000.png" id="1_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://c438q5jhd3oie" path="res://player/img/Idle__001.png" id="2_nvl01"]
+[ext_resource type="Texture2D" uid="uid://bixbosrnld8id" path="res://player/img/Idle__002.png" id="3_ivps1"]
+[ext_resource type="Texture2D" uid="uid://cw3r88etic2n6" path="res://player/img/Idle__003.png" id="4_urp6f"]
+[ext_resource type="Texture2D" uid="uid://1yunev6gjtvf" path="res://player/img/Idle__004.png" id="5_bwjto"]
+[ext_resource type="Texture2D" uid="uid://dxos8ggd32tm6" path="res://player/img/Idle__005.png" id="6_606se"]
+[ext_resource type="Texture2D" uid="uid://dtdm6lnm8aae4" path="res://player/img/Idle__006.png" id="7_u1c27"]
+[ext_resource type="Texture2D" uid="uid://dmin7a0r76b4m" path="res://player/img/Idle__007.png" id="8_op7ga"]
+[ext_resource type="Texture2D" uid="uid://cuu6n01fgk7ga" path="res://player/img/Idle__008.png" id="9_q13i1"]
+[ext_resource type="Texture2D" uid="uid://nlmgymheux7k" path="res://player/img/Idle__009.png" id="10_pylmc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pbfsw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n7ghd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nvl01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_op7ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pylmc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tmop"]
+size = Vector2(293, 512)
+
+[node name="player" type="CharacterBody2D" unique_id=767648867]
+scale = Vector2(0.25, 0.25)
+metadata/_edit_group_ = true
+
+[node name="ani_player" type="AnimatedSprite2D" parent="." unique_id=202059257]
+sprite_frames = SubResource("SpriteFrames_pbfsw")
+animation = &"idle"
+frame = 8
+frame_progress = 0.2561837
+
+[node name="col_player" type="CollisionShape2D" parent="." unique_id=1705347020]
+position = Vector2(2.5, 3)
+shape = SubResource("RectangleShape2D_5tmop")
