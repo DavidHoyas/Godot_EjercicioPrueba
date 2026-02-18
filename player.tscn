@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b1cuxurlb8vgk"]
 
+[ext_resource type="Script" uid="uid://huy3iggi1adw" path="res://player/player.gd" id="1_ivps1"]
 [ext_resource type="Texture2D" uid="uid://betqjhxj1bxe5" path="res://player/img/Idle__000.png" id="1_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://c438q5jhd3oie" path="res://player/img/Idle__001.png" id="2_nvl01"]
 [ext_resource type="Texture2D" uid="uid://bixbosrnld8id" path="res://player/img/Idle__002.png" id="3_ivps1"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dmin7a0r76b4m" path="res://player/img/Idle__007.png" id="8_op7ga"]
 [ext_resource type="Texture2D" uid="uid://cuu6n01fgk7ga" path="res://player/img/Idle__008.png" id="9_q13i1"]
 [ext_resource type="Texture2D" uid="uid://nlmgymheux7k" path="res://player/img/Idle__009.png" id="10_pylmc"]
+[ext_resource type="PackedScene" uid="uid://2em0kqpu43rk" path="res://contador/contador.tscn" id="12_ivps1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pbfsw"]
 animations = [{
@@ -63,7 +65,9 @@ animations = [{
 size = Vector2(293, 512)
 
 [node name="player" type="CharacterBody2D" unique_id=767648867]
+position = Vector2(11, 4)
 scale = Vector2(0.25, 0.25)
+script = ExtResource("1_ivps1")
 metadata/_edit_group_ = true
 
 [node name="ani_player" type="AnimatedSprite2D" parent="." unique_id=202059257]
@@ -75,3 +79,13 @@ frame_progress = 0.2561837
 [node name="col_player" type="CollisionShape2D" parent="." unique_id=1705347020]
 position = Vector2(2.5, 3)
 shape = SubResource("RectangleShape2D_5tmop")
+
+[node name="cam_player" type="Camera2D" parent="." unique_id=765387411]
+zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_bottom = 648
+limit_smoothed = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=365607043]
+
+[node name="Contador" parent="CanvasLayer" unique_id=1540169812 instance=ExtResource("12_ivps1")]

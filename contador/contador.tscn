@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://2em0kqpu43rk"]
+
+[ext_resource type="Script" uid="uid://dbk86ovhmsqtb" path="res://contador/contador.gd" id="1_ndacp"]
+[ext_resource type="Texture2D" uid="uid://d2uoieheimq4d" path="res://coleccionable/img/Bronze_1.png" id="2_e6ans"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6ans"]
+font_size = 50
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Contador" type="Control" unique_id=1540169812]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 545.0
+offset_top = -21.0
+offset_right = 545.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ndacp")
+
+[node name="hbox" type="HBoxContainer" parent="." unique_id=1084071175]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 37.0
+offset_right = 594.0
+offset_bottom = 106.0
+
+[node name="lbl_contador" type="Label" parent="hbox" unique_id=2029102719]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_e6ans")
+
+[node name="imagen" type="Sprite2D" parent="hbox" unique_id=125932332]
+position = Vector2(-67.99999, 10)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e6ans")
+centered = false
