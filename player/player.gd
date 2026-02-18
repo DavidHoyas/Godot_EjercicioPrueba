@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var friction = 1500
 @export var jump_force = -700
 @export var air_acceleration = 2000
-@export var air_friction = 700
+@export var air_friction = 500
 
 @onready var ani_player = $ani_player
 # Referencia al contador
@@ -69,3 +69,15 @@ var monedas: int = 0
 func add_moneda():
 	monedas+=1
 	contador.actualizar(monedas)
+
+func morir():
+		# desactivo las físicas
+	set_physics_process(false)
+	$ani_player.play("muerte")
+	$audio_player.play()
+	$tiempo.start()
+	await $tiempo.timeout
+	get_tree().reload_current_scene()
+
+	# Refrescamos el juego
+	move_and_slide()
