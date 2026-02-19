@@ -17,14 +17,14 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	# CAMBIO 1: Detectar suelo adelante
+	# Detectar suelo adelante
 	var hay_suelo_adelante = false
 	if has_node("detectorDerecho") and sentido == 1:
 		hay_suelo_adelante = $detectorDerecho.is_colliding()
 	elif has_node("detectorIzquierdo") and sentido == -1:
 		hay_suelo_adelante = $detectorIzquierdo.is_colliding()
 	
-	# CAMBIO 2: Detectar pared
+	# Detectar pared
 	var hay_pared_adelante = is_on_wall()
 	
 	# Cambiar dirección si NO hay suelo O hay pared

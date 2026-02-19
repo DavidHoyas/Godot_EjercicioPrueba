@@ -77,7 +77,8 @@ func morir():
 	$audio_player.play()
 	$tiempo.start()
 	await $tiempo.timeout
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://menu/menu.tscn")
+
 
 	# Refrescamos el juego
 	move_and_slide()

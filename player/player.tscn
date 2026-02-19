@@ -184,21 +184,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tmop"]
-size = Vector2(293, 512)
+size = Vector2(239.83325, 512)
 
 [node name="player" type="CharacterBody2D" unique_id=767648867]
-position = Vector2(-484, -66)
+position = Vector2(-469, -61)
 scale = Vector2(0.15, 0.15)
 script = ExtResource("1_ivps1")
-metadata/_edit_group_ = true
 
 [node name="ani_player" type="AnimatedSprite2D" parent="." unique_id=202059257]
 sprite_frames = SubResource("SpriteFrames_pbfsw")
 animation = &"muerte"
 
 [node name="col_player" type="CollisionShape2D" parent="." unique_id=1705347020]
-position = Vector2(2.5, 3)
+position = Vector2(26.749512, -20)
 shape = SubResource("RectangleShape2D_5tmop")
+metadata/_edit_group_ = true
 
 [node name="cam_player" type="Camera2D" parent="." unique_id=765387411]
 zoom = Vector2(0.8, 0.8)
@@ -216,7 +216,7 @@ offset_right = 200.104
 offset_bottom = 322.00006
 
 [node name="tiempo" type="Timer" parent="." unique_id=951453208]
-wait_time = 3.0
+wait_time = 0.75
 one_shot = true
 
 [node name="audio_player" type="AudioStreamPlayer2D" parent="." unique_id=1163685433]

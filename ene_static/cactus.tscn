@@ -13,10 +13,9 @@ script = ExtResource("1_qfbg3")
 position = Vector2(93.99999, 91.99999)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_qpoq6")
-centered = false
 
 [node name="col_cactus" type="CollisionShape2D" parent="." unique_id=984137920]
-position = Vector2(119, 117)
+position = Vector2(93, 92)
 shape = SubResource("RectangleShape2D_qfbg3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

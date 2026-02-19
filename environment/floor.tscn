@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://ck671qb37ry1l"]
 
 [ext_resource type="Texture2D" uid="uid://byg6qw1jphknm" path="res://environment/img/oak_woods_tileset.png" id="1_hwfou"]
-[ext_resource type="PackedScene" uid="uid://b1cuxurlb8vgk" path="res://player.tscn" id="2_k3jw2"]
+[ext_resource type="PackedScene" uid="uid://b1cuxurlb8vgk" path="res://player/player.tscn" id="2_k3jw2"]
 [ext_resource type="PackedScene" uid="uid://cs6sy2upf0ae1" path="res://fondo/fondo.tscn" id="3_m7jos"]
 [ext_resource type="PackedScene" uid="uid://7xkuq4b6rwnd" path="res://coleccionable/coleccionable.tscn" id="4_d8sbr"]
 [ext_resource type="PackedScene" uid="uid://d02fivugli5bp" path="res://ene_dyn/ene_dyn_zombie.tscn" id="5_hh3ji"]
+[ext_resource type="PackedScene" uid="uid://cg5gsf6ogf0k1" path="res://ene_static/cactus.tscn" id="6_7koh7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k3jw2"]
 texture = ExtResource("1_hwfou")
@@ -92,4 +93,23 @@ position = Vector2(1898, -8)
 
 [node name="enemigos" type="Node2D" parent="." unique_id=612399090]
 
-[node name="EneDynZombie" parent="enemigos" unique_id=780362852 instance=ExtResource("5_hh3ji")]
+[node name="zombie1" parent="enemigos" unique_id=780362852 instance=ExtResource("5_hh3ji")]
+position = Vector2(79, 1)
+
+[node name="zombie2" parent="enemigos" unique_id=481851639 instance=ExtResource("5_hh3ji")]
+position = Vector2(522, 6)
+
+[node name="zombie3" parent="enemigos" unique_id=229493939 instance=ExtResource("5_hh3ji")]
+position = Vector2(-304, -356)
+
+[node name="zombie4" parent="enemigos" unique_id=1884615273 instance=ExtResource("5_hh3ji")]
+position = Vector2(1707, 172)
+
+[node name="Cactus1" parent="enemigos" unique_id=599760680 instance=ExtResource("6_7koh7")]
+position = Vector2(1011, 100)
+
+[node name="Cactus2" parent="enemigos" unique_id=1226509051 instance=ExtResource("6_7koh7")]
+position = Vector2(1046, 100)
+
+[node name="Cactus3" parent="enemigos" unique_id=1271994627 instance=ExtResource("6_7koh7")]
+position = Vector2(-626, -212)
