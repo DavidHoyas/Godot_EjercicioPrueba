@@ -91,25 +91,33 @@ position = Vector2(395, -324)
 [node name="moneda4" parent="monedas" unique_id=810336550 instance=ExtResource("4_d8sbr")]
 position = Vector2(1898, -8)
 
-[node name="enemigos" type="Node2D" parent="." unique_id=612399090]
+[node name="zombies" type="Node2D" parent="." unique_id=612399090]
 
-[node name="zombie1" parent="enemigos" unique_id=780362852 instance=ExtResource("5_hh3ji")]
+[node name="zombie1" parent="zombies" unique_id=780362852 instance=ExtResource("5_hh3ji")]
 position = Vector2(79, 1)
 
-[node name="zombie2" parent="enemigos" unique_id=481851639 instance=ExtResource("5_hh3ji")]
+[node name="zombie2" parent="zombies" unique_id=481851639 instance=ExtResource("5_hh3ji")]
 position = Vector2(522, 6)
 
-[node name="zombie3" parent="enemigos" unique_id=229493939 instance=ExtResource("5_hh3ji")]
+[node name="zombie3" parent="zombies" unique_id=229493939 instance=ExtResource("5_hh3ji")]
 position = Vector2(-304, -356)
 
-[node name="zombie4" parent="enemigos" unique_id=1884615273 instance=ExtResource("5_hh3ji")]
+[node name="zombie4" parent="zombies" unique_id=1884615273 instance=ExtResource("5_hh3ji")]
 position = Vector2(1707, 172)
 
-[node name="Cactus1" parent="enemigos" unique_id=599760680 instance=ExtResource("6_7koh7")]
+[node name="cactus" type="Node2D" parent="." unique_id=1549090150]
+
+[node name="cactus1" parent="cactus" unique_id=599760680 instance=ExtResource("6_7koh7")]
 position = Vector2(1011, 100)
 
-[node name="Cactus2" parent="enemigos" unique_id=1226509051 instance=ExtResource("6_7koh7")]
+[node name="cactus2" parent="cactus" unique_id=1226509051 instance=ExtResource("6_7koh7")]
 position = Vector2(1046, 100)
 
-[node name="Cactus3" parent="enemigos" unique_id=1271994627 instance=ExtResource("6_7koh7")]
+[node name="cactus3" parent="cactus" unique_id=1271994627 instance=ExtResource("6_7koh7")]
 position = Vector2(-626, -212)
+
+[node name="cactus_muerte" parent="cactus" unique_id=159573479 instance=ExtResource("6_7koh7")]
+visible = false
+position = Vector2(14701, -10633.001)
+rotation = 1.5707964
+scale = Vector2(150, 150)
